@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <ImageView
+            android:id="@+id/iv_try"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/border"
+            android:src="@drawable/ic_insert_emoticon_black_24dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Image from"
+            app:layout_constraintTop_toBottomOf="@+id/iv_try"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <Button
+                android:id="@+id/btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="Galery"
+                android:drawableLeft="@drawable/ic_photo_album_black_24dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_camera_alt_black_24dp"
+                android:text="Camera"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
